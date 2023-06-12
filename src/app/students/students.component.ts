@@ -10,9 +10,8 @@ import { Student } from '../models/student.models';
 export class StudentsComponent {
 
   students: Student[] = [];
-  displaycolumns: string [] = ['FirstName', 'LastName', 'Email', 'PhoneNumber', 'Date of Birth', 'Image', 'Gender', 'City'];
-
   
+
   constructor(private studentService: StudentService){
     this.studentService.getAllStudents().subscribe(
       (successResponse) =>{
