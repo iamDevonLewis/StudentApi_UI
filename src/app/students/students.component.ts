@@ -10,7 +10,7 @@ import { Student } from '../models/student.models';
 export class StudentsComponent {
 
   students: Student[] = [];
-  
+ 
 
   constructor(private studentService: StudentService){
     this.studentService.getAllStudents().subscribe(
@@ -21,6 +21,8 @@ export class StudentsComponent {
         console.log(errorResponse)
       }
     );
+
+    
   }
 
 }

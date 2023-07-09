@@ -22,10 +22,16 @@
         <td>{{ student.lastName }}</td>
         <td>{{ student.email }}</td>
         <td>{{ student.phoneNumber }}</td>
-        <td>{{ student.dateOfBirth }}</td>
+        <td>{{ student.dateOfBirth | date: 'dd-MM-yyyy' }}</td>
         <td>{{ student.gender.description }}</td>
         <td>{{ student.address.street }}, {{ student.address.city }}</td>
       </tr>
     </tbody>
+
+    <!-- <div class="pagination">
+        <button [disabled]="currentPage === 1" (click)="previousPage()">Previous</button>
+        <span>{{ currentPage }} / {{ totalPages }}</span>
+        <button [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
+      </div> -->
   </table>
 </div>
