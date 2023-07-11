@@ -1,1 +1,57 @@
-<p>view-student works!</p>
+<div class="container">
+    <h1 class="my-3">View Student</h1>
+    <div class="row justify-content-end">
+        <div class="col-2 end-xs">
+            <a class="btn btn-secondary" routerLink="/students">Back to Students</a>
+        </div>   
+    </div>
+
+    <div class="container">
+        
+        <form #studentform = ngForm >
+          <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" [(ngModel)]="student.firstName" name="firstName">
+          </div>
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" [(ngModel)]="student.lastName" name="lastName">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" [(ngModel)]="student.email" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number" [(ngModel)]="student.phoneNumber" name="phoneNumber">
+          </div>
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="imageUrl" placeholder="Enter Image URL" [(ngModel)]="student.imageUrl" name="imageUrl">
+          </div>
+          <div class="mb-3">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth" [(ngModel)]="student.dateOfBirth" name="dateOfBirth">
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)]="student.gender.description" name="gender" >
+          </div>
+          <div class="mb-3">
+            <label for="street" class="form-label">Street</label>
+            <input type="text" class="form-control" id="street" placeholder="Enter street" [(ngModel)]="student.address.street" name="address.street">
+          </div>
+          <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city" [(ngModel)]="student.address.city" name="address.city">
+          </div>
+          <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter state" [(ngModel)]="student.address.state" name="address.state">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+    
+</div>

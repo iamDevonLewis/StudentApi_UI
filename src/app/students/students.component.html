@@ -13,6 +13,7 @@
         <th scope="col">Date of Birth</th>
         <th scope="col">Gender</th>
         <th scope="col">Address</th>
+        <th scope="col"> Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
         <td>{{ student.dateOfBirth | date: 'dd-MM-yyyy' }}</td>
         <td>{{ student.gender.description }}</td>
         <td>{{ student.address.street }}, {{ student.address.city }}</td>
+        <td><a [routerLink]="['/students', student.id]">Edit</a></td>
       </tr>
     </tbody>
 
